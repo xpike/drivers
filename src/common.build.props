@@ -1,0 +1,24 @@
+<Project>
+  <PropertyGroup>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	  <Authors>xPike contributors</Authors>
+    <PackageIcon>xpike-pacakge-icon.png</PackageIcon>
+    <Company>xPike Project</Company>
+    <Copyright>MIT License, Copyright (C) 2019 - xPike contributors</Copyright>
+    <PackageProjectUrl>https://xpike.github.io/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/xpike/drivers</RepositoryUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageTags>xPike;microservices;http</PackageTags>
+    <PackageReleaseNotes>https://github.com/xpike/ioc/blob/master/CHANGELOG.md</PackageReleaseNotes>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\xpike-pacakge-icon.png" Pack="true" PackagePath="\" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>

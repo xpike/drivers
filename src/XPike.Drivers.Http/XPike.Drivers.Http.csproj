@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../common.build.props"/>
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
+    <Description>XPike paved-road for calling Http services.</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net452'">
+    <DefineConstants>$(DefineConstants);NETFX;LEGACY</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition="$(DefineConstants.Contains('NETFX'))">
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="Microsoft.Extensions.Http" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="XPike.IoC" Version="1.0.3" />
+    <PackageReference Include="XPike.Configuration" Version="1.1.6" />
+    <PackageReference Include="XPike.Logging" Version="1.0.0" />
+    <PackageReference Include="XPike.Metrics" Version="2.3.1" />
+    <PackageReference Include="MilestoneTG.TransientFaultHandling.Http" Version="2.1.0" />
+    <PackageReference Include="NHystrix.Http" Version="0.5.1-beta2642" />
+  </ItemGroup>
+
+</Project>

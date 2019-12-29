@@ -1,0 +1,21 @@
+{
+  "metadata": [
+      {
+        "src": [
+          {
+            "src": "../src",
+            "exclude": [ "**/bin/**", "**/obj/**" ],
+            "files": [
+              "**/*.csproj"
+            ]
+          }
+        ],
+        "dest": "api",
+        "disableGitFeatures": false,
+        "disableDefaultFilter": false,
+        "properties": {
+          "TargetFramework": "net452"
+        }
+      }
+    ]
+}
